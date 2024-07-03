@@ -61,8 +61,7 @@ variable "aks_vm_type" {
 variable "aks_az" {
   description = "Availability Zones in which this Kubernetes Cluster should be located."
   type        = list(string)
-  #default     = ["1", "2"] - use only when deploying in personal directory and not Hybrid MSP as below
-  default = ["1"]
+  default     = ["1", "2"] - use only when deploying in personal directory and not Hybrid MSP as below
 }
 variable "aks_sku" {
   description = "SKU Tier that should be used for this Kubernetes Cluster"
