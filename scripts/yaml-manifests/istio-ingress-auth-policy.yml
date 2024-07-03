@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: probe
+  namespace: istio-ingress
+spec:
+  action: ALLOW
+  rules:
+  - to:
+    - operation:
+        hosts: ["*.nip.io"]
+  selector:
+    matchLabels:
+      istio: ingressgateway
